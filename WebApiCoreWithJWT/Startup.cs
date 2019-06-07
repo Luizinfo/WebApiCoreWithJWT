@@ -8,12 +8,14 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using WebApiCoreWithJWT.Helpers;
+using WebApiCoreWithJWT.Infra.DataAccess.Sql.Contexts;
 using WebApiCoreWithJWT.Services;
 
 namespace WebApiCoreWithJWT
@@ -59,6 +61,10 @@ namespace WebApiCoreWithJWT
                     ValidateAudience = false
                 };
             });
+
+            //configure data base
+            services.AddDbContext<DbContextMain>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionConfiguracao")));
 
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();

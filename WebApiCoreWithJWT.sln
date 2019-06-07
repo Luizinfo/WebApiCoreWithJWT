@@ -3,7 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiCoreWithJWT", "WebApiCoreWithJWT\WebApiCoreWithJWT.csproj", "{BBDD6673-4603-455B-AEBB-10510312E5E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiCoreWithJWT", "WebApiCoreWithJWT\WebApiCoreWithJWT.csproj", "{BBDD6673-4603-455B-AEBB-10510312E5E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Host Layer", "1. Host Layer", "{21746B3C-C29F-4195-8D2F-B5C67661FE9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Service Layer", "3. Service Layer", "{3A661D8E-B823-4A9E-A7B9-BDBEAEBA54E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application Layer", "2. Application Layer", "{5DC1F462-944F-48C6-AB57-F49B30C5C4E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infrastructure Layer", "4. Infrastructure Layer", "{03264C0F-017A-4A54-BF0D-9F63BB8C1716}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. TestLayer", "5. TestLayer", "{AA467AE4-E7E4-4CD7-A488-C58073720A5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Data", "1. Data", "{D1D55FCF-08C4-434A-932F-6A0441326149}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Cross Cutting", "2. Cross Cutting", "{1980CE88-4F35-47C0-B0EA-B43825C3BC7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiCoreWithJWT.Models", "WebApiCoreWithJWT.Models\WebApiCoreWithJWT.Models.csproj", "{CFC54D6C-365E-47CC-ADE4-9ABE282FA0C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiCoreWithJWT.Infra.DataAccess", "WebApiCoreWithJWT.Infra.DataAccess\WebApiCoreWithJWT.Infra.DataAccess.csproj", "{BE59AF88-C50D-4420-A38D-F7A86BDB78C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiCoreWithJWT.Infra.DataAccess.Sql", "WebApiCoreWithJWT.Infra.DataAccess.Sql\WebApiCoreWithJWT.Infra.DataAccess.Sql.csproj", "{11804C49-0B1C-453C-B7F8-CB3580AEE36F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +35,29 @@ Global
 		{BBDD6673-4603-455B-AEBB-10510312E5E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBDD6673-4603-455B-AEBB-10510312E5E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBDD6673-4603-455B-AEBB-10510312E5E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFC54D6C-365E-47CC-ADE4-9ABE282FA0C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC54D6C-365E-47CC-ADE4-9ABE282FA0C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC54D6C-365E-47CC-ADE4-9ABE282FA0C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC54D6C-365E-47CC-ADE4-9ABE282FA0C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE59AF88-C50D-4420-A38D-F7A86BDB78C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE59AF88-C50D-4420-A38D-F7A86BDB78C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE59AF88-C50D-4420-A38D-F7A86BDB78C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE59AF88-C50D-4420-A38D-F7A86BDB78C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11804C49-0B1C-453C-B7F8-CB3580AEE36F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11804C49-0B1C-453C-B7F8-CB3580AEE36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11804C49-0B1C-453C-B7F8-CB3580AEE36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11804C49-0B1C-453C-B7F8-CB3580AEE36F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBDD6673-4603-455B-AEBB-10510312E5E6} = {21746B3C-C29F-4195-8D2F-B5C67661FE9D}
+		{D1D55FCF-08C4-434A-932F-6A0441326149} = {03264C0F-017A-4A54-BF0D-9F63BB8C1716}
+		{1980CE88-4F35-47C0-B0EA-B43825C3BC7B} = {03264C0F-017A-4A54-BF0D-9F63BB8C1716}
+		{CFC54D6C-365E-47CC-ADE4-9ABE282FA0C0} = {3A661D8E-B823-4A9E-A7B9-BDBEAEBA54E6}
+		{BE59AF88-C50D-4420-A38D-F7A86BDB78C3} = {D1D55FCF-08C4-434A-932F-6A0441326149}
+		{11804C49-0B1C-453C-B7F8-CB3580AEE36F} = {D1D55FCF-08C4-434A-932F-6A0441326149}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A834ED5-8F61-4FA2-B90A-37B629E44581}

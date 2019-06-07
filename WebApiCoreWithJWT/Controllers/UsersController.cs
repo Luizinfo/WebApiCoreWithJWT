@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -50,7 +51,8 @@ namespace WebApiCoreWithJWT.Controllers
             {
                 return NotFound();
             }
-
+            var ttt = (ClaimsIdentity) User.Identity;
+            var temp = ttt.Claims.Where(c => c.Type == ClaimTypes.UserData).FirstOrDefault()?.Value;
             // only allow admins to access other user records
             var currentUserId = int.Parse(User.Identity.Name);
             if (id != currentUserId && !User.IsInRole(Role.Admin))
